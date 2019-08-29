@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="234.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="noCompany.controller.ViewController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <SplitPane dividerPositions="0.45878136200716846" orientation="VERTICAL" prefHeight="218.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Text layoutX="60.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Podaj nazwę użytkownika:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="userField" layoutX="329.0" layoutY="14.0" prefHeight="33.0" prefWidth="296.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font></TextField>
+                        <Button fx:id="searchButton" defaultButton="true" layoutX="530.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="38.0" prefWidth="109.0" text="Szukaj" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <Pane fx:id="SearchingPane" layoutX="175.0" layoutY="58.0" prefHeight="38.0" prefWidth="308.0">
+                           <children>
+                              <Text layoutX="43.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Szukam...">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <ProgressIndicator layoutX="165.0" layoutY="2.0" prefHeight="33.0" prefWidth="34.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="133.0" prefWidth="651.0">
+                     <children>
+                        <Text layoutX="27.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Najnowsze repozytorium:" textAlignment="CENTER" wrappingWidth="275.7529296875">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                    <Label fx:id="repozytoriumArea" alignment="CENTER" layoutX="27.0" layoutY="56.0" prefHeight="35.0" prefWidth="276.0" style="&#10;" text="Name" textAlignment="CENTER" wrapText="false">
+                      <font>
+                        <Font size="18.0" />
+                      </font>
+                    </Label>
+                        <Text layoutX="351.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ostatnio zaktualizowano:" textAlignment="CENTER" wrappingWidth="264.99999590590596">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="timeArea" alignment="CENTER" layoutX="351.0" layoutY="56.0" prefHeight="35.0" prefWidth="265.0" style="&#10;" text="Time" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="moreButton" defaultButton="false" layoutX="562.0" layoutY="97.0" mnemonicParsing="false" onAction="#handleMoreButton" prefHeight="21.0" prefWidth="109.0" text="Więcej" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
