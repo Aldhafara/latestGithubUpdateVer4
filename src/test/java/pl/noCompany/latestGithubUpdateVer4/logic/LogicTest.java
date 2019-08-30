@@ -11,6 +11,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class LogicTest {
 
+    Logic logic = new Logic();
+
     @Test
     public void shouldReturnCorrectDateFromGivenString(){
         //given
@@ -59,7 +61,7 @@ public class LogicTest {
         int responseCode;
         List<Repository> list = new ArrayList<>();
         //when
-        Logic.connection(name,list);
+        logic.connection(name,list);
         responseCode=Logic.responseCode;
 
         //then

@@ -1,48 +1,24 @@
 package pl.noCompany.latestGithubUpdateVer4.model;
 
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-
-import java.time.LocalDateTime;
 
 public class RepositoryFX {
 
     private StringProperty name;
-    private ObjectProperty<LocalDateTime> time;
-
-    public RepositoryFX(){
-        this(null,null);
-    }
+    private StringProperty time;
 
     public RepositoryFX(String name, String time){
         this.name = new SimpleStringProperty(name);
-        this.time = new SimpleObjectProperty(time);
-    }
-
-    public String getName() {
-        return name.get();
+        this.time = new SimpleStringProperty(time);
     }
 
     public StringProperty getNameProperty() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name.set(name);
-    }
-
-    public LocalDateTime getTime() {
-        return time.get();
-    }
-
-    public ObjectProperty<LocalDateTime> getTimeProperty() {
+    public StringProperty getTimeProperty() {
         return time;
-    }
-
-    public void setTime(LocalDateTime time) {
-        this.time.set(time);
     }
 
     @Override

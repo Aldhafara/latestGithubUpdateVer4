@@ -7,7 +7,6 @@ public class Repository implements Comparable<Repository> {
     private String name;
     private LocalDateTime time;
 
-
     public Repository(){
         this(null,null);
     }
@@ -35,8 +34,12 @@ public class Repository implements Comparable<Repository> {
 
     @Override
     public String toString() {
+        String formatDateTime = null;
+        if (time!=null)
+            formatDateTime = time.format(DateAndTimeFormatter.getFormatter());
+
         return "Repository{name=          " + name +
-                "\n   time=                  " + time +
+                "\n   time=                  " + formatDateTime +
                 "  }";
     }
 
